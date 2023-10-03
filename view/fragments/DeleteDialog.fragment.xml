@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="DeleteDialog"
+      title="Delete {/recipient/name}"
+      >
+      <Label text="{i18n>messageForDelete}" labelFor="delete" />
+
+      <beginButton>
+         <Button
+            text="{i18n>messageExit}"
+            press=".onCloseDialogDelete"/>
+      </beginButton>
+      <endButton>
+      <Button 
+            text="{i18n>messageSubmit}"
+            press=".onSubmitDelete"
+         />
+      </endButton>
+   </Dialog>
+</core:FragmentDefinition>

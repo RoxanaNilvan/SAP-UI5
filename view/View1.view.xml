@@ -1,0 +1,38 @@
+<mvc:View controllerName="app.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+
+        <FlexBox
+            height="100px"
+            alignItems="Start"
+            justifyContent="Center"
+        >
+            <GenericTile
+            class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+            header="Crud operations on Product table"
+            press="onTilePress"   
+            backgroundImage="https://assets.website-files.com/5ff66329429d880392f6cba2/63fdf75ad4a978704fe9ac9c_CRUD%20%20Preview.jpeg"
+            frameType="TwoByHalf" 
+        >
+            <TileContent />
+        </GenericTile>
+        </FlexBox>
+        <FlexBox
+            height="100px"
+            alignItems="Start"
+            justifyContent="Center"
+        >
+            <GenericTile
+            class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+            header="zzz"
+            press="onTilePress2"   
+            backgroundImage="https://www.b-a-w.com/wp-content/uploads/2022/10/4-1.jpg"
+            frameType="TwoByHalf" 
+        >
+            <TileContent />
+        </GenericTile>
+        </FlexBox>
+    </Page>
+</mvc:View>

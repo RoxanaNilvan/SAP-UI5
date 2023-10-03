@@ -1,0 +1,50 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="EditDialog"
+      title="Edit {/recipient/name}"
+      >
+
+      <Label text="{i18n>idI}" labelFor="editId" required="true"/>
+      <Input
+			id="editId"
+			type="Id"
+			placeholder="Enter id"
+			class="sapUiSmallMarginBottom" />
+
+      <Label text="{i18n>nameI}" labelFor="editName" required="true"/>
+      <Input
+			id="editName"
+			type="Name"
+			placeholder="{i18n>nameP}"
+			class="sapUiSmallMarginBottom" />
+
+      <Label text="{i18n>priceI}" labelFor="editPrice" required="true"/>
+      <Input
+			id="editPrice"
+			type="Price"
+			placeholder="{i18n>priceP}"
+			class="sapUiSmallMarginBottom" />
+
+      <Label text="{i18n>ratingI}" labelFor="editRating" required="true"/>
+      <Input
+			id="editRating"
+			type="Rating"
+			placeholder="{i18n>ratingP}"
+
+			class="sapUiSmallMarginBottom" />
+
+      <beginButton>
+         <Button
+            text="{i18n>messageExit}"
+            press=".onCloseDialogEdit"/>
+      </beginButton>
+      <endButton>
+      <Button 
+            text="{i18n>messageSubmit}"
+            press=".onSubmitEdit"
+         />
+      </endButton>
+   </Dialog>
+</core:FragmentDefinition>

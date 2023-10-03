@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="InsertDialog"
+      title="Insert {/recipient/name}"
+      >
+      <Label text="{i18n>nameI}" labelFor="inputName" required="true"/>
+      <Input
+			id="inputName2"
+			type="Name"
+			placeholder="{i18n>nameP}"
+			class="sapUiSmallMarginBottom" />
+
+      <Label text="{i18n>priceI}" labelFor="inputPrice" required="true" />
+      <Input
+			id="inputPrice2"
+			type="Price"
+			placeholder="{i18n>priceP}"
+			class="sapUiSmallMarginBottom" />
+
+      <Label text="{i18n>ratingI}" labelFor="inputRaiting" required="true"/>
+      <Input
+			id="inputRaiting2"
+			type="Raiting"
+			placeholder="{i18n>ratingP}"
+			class="sapUiSmallMarginBottom" />
+
+      <beginButton>
+         <Button
+            text="{i18n>messageExit}"
+            press=".onCloseDialogInsert"/>
+      </beginButton>
+      <endButton>
+      <Button 
+            text="{i18n>messageSubmit}"
+            press=".onSubmitInsert"
+         />
+      </endButton>
+   </Dialog>
+</core:FragmentDefinition>

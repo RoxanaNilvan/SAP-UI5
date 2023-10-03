@@ -1,0 +1,55 @@
+<mvc:View controllerName="app.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   <Page
+        id="page"
+        title="{i18n>title}"
+        showNavButton="true"
+		navButtonPress=".onNavBack" >
+        
+       <Table id="idCategories" items="{/Categories}">
+        <headerToolbar>
+			<OverflowToolbar>
+				<Title text="Categories" level="H2"/>
+                <ToolbarSpacer/>
+				<Toolbar>
+                        
+                        <SearchField id="searchField" placeholder="{i18n>searchP}" liveChange="onLiveSearch" width="100%" class="sapUiSmallMargin" />			   
+                        <Button icon="sap-icon://add-document" text="{i18n>messageInsert}" press="onInsert"/>
+                        <Button icon="sap-icon://edit" text="{i18n>messageEdit}" press="onEdit"/>
+                        <Button icon="sap-icon://download" text="{i18n>messageDownload}" press="onExportToExcel"/>
+                </Toolbar>
+			</OverflowToolbar>
+		</headerToolbar>
+        	<infoToolbar>
+			<OverflowToolbar>
+				<Label text=""/>
+			</OverflowToolbar>
+		</infoToolbar>
+            <columns>
+                <Column>
+                    <Text text="{i18n>idI}" />
+                </Column>
+                <Column>
+                    <Text text="{i18n>nameI}" />
+                </Column>
+                <Column >
+                    <Text text="" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onItemPress">
+                    <cells>
+                        <Text text="{ID}" />
+                        <Text text="{Name}" />
+                        <HBox>
+                        <Button icon="sap-icon://delete" text="{i18n>messageDelete}" press="onDelete"/>
+                        <Button icon="sap-icon://copy" text="{i18n>messageDuplicate}" press="onDuplicate"/>
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+     
+    </Page>
+</mvc:View>
